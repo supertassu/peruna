@@ -1,0 +1,35 @@
+{
+    "name": "Peruna",
+    "author": "Taavi",
+    "url": "https://tassu.me",
+    "descriptionmsg": "skindesc-peruna",
+    "namemsg": "skinname-peruna",
+    "license-name": "MIT",
+	"type": "skin",
+	"ValidSkinNames": {
+		"peruna": "Peruna"
+    },
+    "AutoloadClasses": {
+		"SkinPeruna": "src/SkinPeruna.php",
+		"PerunaTemplate": "src/PerunaTemplate.php"
+	},
+	"MessagesDirs": {
+		"Peruna": "i18n"
+    },
+	"ResourceModules": {
+		"skins.peruna": {
+			"styles": {
+				"dist/app.css": {}
+			}
+		},
+		"skins.peruna.js": {
+			"scripts": [
+				"scripts/index.js"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Peruna"
+	}
+}

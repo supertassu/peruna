@@ -1,0 +1,101 @@
+<?php
+/**
+ * BaseTemplate class for Foo Bar skin
+ *
+ * @ingroup Skins
+ */
+class PerunaTemplate extends BaseTemplate
+{
+	/**
+	 * Outputs the entire contents of the page
+	 */
+	public function execute()
+	{
+		$this->html('headelement'); ?>
+
+		<div class="flex justify-between items-center flex-wrap p-2">
+			<div>
+				<form action="<?php $this->text( 'wgScript' ); ?>">
+					<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+					<?php echo $this->makeSearchInput([ 'id' => 'searchInput' ]); ?>
+				</form>
+			</div>
+
+			<ul class="list-reset flex personal-tools">
+				<?php
+					foreach ( $this->getPersonalTools() as $key => $item ) {
+						echo $this->makeListItem( $key, $item );
+					}
+				?>
+			</ul>
+		</div>
+
+	<div class="md:flex">
+		<div class="flex-none w-full md:max-w-xs p-6">
+			<a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']);?>"
+						<?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>>
+				<img src="<?php $this->text('logopath');?>" alt="<?php $this->text('sitename') ?>">
+			</a>
+			<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
+				<div id="<?php echo Sanitizer::escapeId($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>>
+					<h5><?php echo htmlspecialchars($box['header']); ?></h5>
+					<?php if (is_array($box['content'])) : ?>
+						<ul class="sidebar-list">
+							<?php foreach ($box['content'] as $key => $item) {
+								echo $this->makeListItem($key, $item);
+							} ?>
+						</ul>
+					<?php
+				else :
+					echo $box['content'];
+				endif;
+				?>
+				</div>
+			<?php endforeach; ?>
+
+		</div>
+		<div class="flex-1 p-6">
+		<div class="container max-md:px-6 mx-auto pt-6">
+			<?php if ( $this->data['newtalk'] ): ?>
+				<div class="line-usermessage">
+					<?php $this->html( 'newtalk' );?>
+				</div>
+			<?php endif; ?>
+
+			<div class="text-center">
+				<?php $this->html( 'sitenotice' ); ?>
+			</div>
+
+			<div class="page-title">
+				<ul class="flex list-reset flex-wrap">
+					<?php foreach ( $this->data['content_actions'] as $key => $tab ) {
+						echo $this->makeListItem( $key, $tab );
+					} ?>
+				</ul>
+
+
+				<?php echo $this->getIndicators(); ?>
+				<h1 class="text-4xl text-gray-100 leading-none p-0 m-0"><?php $this->html( 'title' ); ?></h1>
+
+				<?php if ( $this->data['isarticle'] ) {
+					echo '<div>';
+					$this->msg( 'tagline' ); 
+					echo '</div>';
+				} ?>
+
+				<?php $this->html( 'subtitle' ); ?>
+				<?php $this->html( 'undelete' ); ?>
+			</div>
+
+			<?php $this->html( 'bodytext' ); ?>
+			<?php $this->html( 'dataAfterContent' ); ?>
+			<?php $this->html( 'catlinks' ); ?>
+		</div>
+	</div>
+
+	<?php $this->printTrail(); ?>
+	</body>
+
+	</html><?php
+	}
+}

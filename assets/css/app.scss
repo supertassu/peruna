@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+    @apply text-blue-300;
+}
+
+a:hover {
+    @apply underline;
+}
+
+a.new {
+    @apply text-red-400;
+}
+
+.personal-tools li {
+    @apply mr-2;
+}
+
+.sidebar-list {
+    li {
+        @apply p-0 mb-1 pl-4 text-gray-400 leading-none;
+    }
+}
+
+.page-title {
+    @apply w-full mb-6;
+
+    & .mw-indicators {
+        display: inline-block;
+        float: right;
+
+        & .mw-indicator {
+            display: inline-block;
+        }
+    }
+
+    ul {
+        @apply mt-4;
+    }
+
+    li {
+        @apply mr-2;
+
+        a {
+            @apply text-gray-400 text-sm;
+        }
+    }
+}
+
+.catlinks {
+    @apply p-2 border border-gray-900 rounded mt-4;
+
+    li {
+        border-left: 1px solid #5c6370;
+
+        a {
+            @apply text-gray-400;
+        }
+
+        a.new {
+            @apply text-red-400;
+        }
+    }
+}
+
+.oo-ui-popupWidget-popup {
+    @apply text-gray-800;
+}
+
+input[type=text], input[type=search] {
+    @apply py-1 px-2 text-white bg-gray-900;
+}
+
+.suggestions {
+    div.suggestions-results, div.suggestions-special {
+        @apply bg-gray-900 text-white border-gray-800 border;
+
+        .suggestions-result {
+            @apply text-white;
+        }
+
+        div.suggestion-result-current {
+            @apply bg-blue-800 text-white;
+        }
+
+        div.special-query {
+            @apply text-white;
+        }
+    }
+}
+
+#toc {
+    display: table;
+    background: #0c1016;
+    @apply p-2 my-2 text-white border border-gray-900;
+
+    .toctitle h2 {
+        @apply inline-block my-1;
+    }
+
+    ul {
+        @apply mx-4;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-100 leading-none p-0 m-0 mt-4 mb-1;
+}
+
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-3xl;
+}
+
+h4 {
+    @apply text-lg;
+}
+
+.thumb {
+    background: #0c1016 !important;
+    @apply p-2 m-2 border border-gray-900 text-gray-100;
+
+    .thumbcaption {
+        @apply mt-2;
+    }
+}
