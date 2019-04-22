@@ -144,12 +144,16 @@ h4 {
     }
 }
 
-table.wikitable {
+table.wikitable, table.mw-datatable {
     background: #0c1016 !important;
     @apply text-gray-200 border border-gray-900;
 
     th {
         background: #1A202C !important;
+    }
+
+    td {
+        background: #0c1016 !important;
     }
 }
 
@@ -171,4 +175,8 @@ code {
     border: 1px solid #1A202C;
     border-radius: 2px;
     padding: 1px 4px;
+}
+
+table {
+    border-collapse: separate;
 }

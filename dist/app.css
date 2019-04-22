@@ -7609,15 +7609,19 @@ h4 {
   margin-top: 0.5rem;
 }
 
-table.wikitable {
+table.wikitable, table.mw-datatable {
   background: #0c1016 !important;
   color: #edf2f7;
   border-width: 1px;
   border-color: #1a202c;
 }
 
-table.wikitable th {
+table.wikitable th, table.mw-datatable th {
   background: #1A202C !important;
+}
+
+table.wikitable td, table.mw-datatable td {
+  background: #0c1016 !important;
 }
 
 .mw-parser-output ul {
@@ -7638,6 +7642,10 @@ code {
   border: 1px solid #1A202C;
   border-radius: 2px;
   padding: 1px 4px;
+}
+
+table {
+  border-collapse: separate;
 }
 
 @media (min-width: 640px) {
