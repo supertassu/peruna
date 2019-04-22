@@ -7633,6 +7633,13 @@ textarea {
   color: #EDF2F7;
 }
 
+code {
+  background-color: #0c1016;
+  border: 1px solid #1A202C;
+  border-radius: 2px;
+  padding: 1px 4px;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
