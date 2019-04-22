@@ -62,7 +62,7 @@ class PerunaTemplate extends BaseTemplate
 				</div>
 			<?php endif; ?>
 
-			<div>
+			<div id="sitenotice">
 				<?php $this->html( 'sitenotice' ); ?>
 			</div>
 
