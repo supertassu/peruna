@@ -7679,6 +7679,29 @@ table {
   background-image: none !important;
 }
 
+.footer {
+  margin-top: 3rem;
+}
+
+.footer ul {
+  margin-left: 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footer .footer-icons {
+  display: inline-block;
+  float: right;
+}
+
+.footer .footer-icons div {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;

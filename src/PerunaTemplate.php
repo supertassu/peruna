@@ -13,28 +13,27 @@ class PerunaTemplate extends BaseTemplate
 	{
 		$this->html('headelement'); ?>
 
-		<div class="flex justify-between items-center flex-wrap p-2">
-			<div>
-				<form action="<?php $this->text( 'wgScript' ); ?>">
-					<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
-					<?php echo $this->makeSearchInput([ 'id' => 'searchInput' ]); ?>
-				</form>
-			</div>
-
-			<ul class="list-reset flex personal-tools">
-				<?php
-					foreach ( $this->getPersonalTools() as $key => $item ) {
-						echo $this->makeListItem( $key, $item );
-					}
-				?>
-			</ul>
+	<div class="flex justify-between items-center flex-wrap p-2">
+		<div>
+			<form action="<?php $this->text('wgScript'); ?>">
+				<input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
+				<?php echo $this->makeSearchInput(['id' => 'searchInput']); ?>
+			</form>
 		</div>
+
+		<ul class="list-reset flex personal-tools">
+			<?php
+			foreach ($this->getPersonalTools() as $key => $item) {
+				echo $this->makeListItem($key, $item);
+			}
+			?>
+		</ul>
+	</div>
 
 	<div class="md:flex">
 		<div class="flex-none w-full md:max-w-xs p-6">
-			<a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']);?>"
-						<?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>>
-				<img src="<?php $this->text('logopath');?>" alt="<?php $this->text('sitename') ?>">
+			<a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']); ?>" <?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>>
+				<img src="<?php $this->text('logopath'); ?>" alt="<?php $this->text('sitename') ?>">
 			</a>
 			<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
 				<div id="<?php echo Sanitizer::escapeId($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>>
@@ -55,42 +54,65 @@ class PerunaTemplate extends BaseTemplate
 
 		</div>
 		<div class="flex-1 p-6">
-		<div class="container max-md:px-6 mx-auto pt-6">
-			<?php if ( $this->data['newtalk'] ): ?>
-				<div class="line-usermessage">
-					<?php $this->html( 'newtalk' );?>
+			<div class="container max-md:px-6 mx-auto pt-6">
+				<?php if ($this->data['newtalk']) : ?>
+					<div class="line-usermessage">
+						<?php $this->html('newtalk'); ?>
+					</div>
+				<?php endif; ?>
+
+				<div id="sitenotice">
+					<?php $this->html('sitenotice'); ?>
 				</div>
-			<?php endif; ?>
 
-			<div id="sitenotice">
-				<?php $this->html( 'sitenotice' ); ?>
-			</div>
+				<div class="page-title">
+					<ul class="flex list-reset flex-wrap">
+						<?php foreach ($this->data['content_actions'] as $key => $tab) {
+							echo $this->makeListItem($key, $tab);
+						} ?>
+					</ul>
 
-			<div class="page-title">
-				<ul class="flex list-reset flex-wrap">
-					<?php foreach ( $this->data['content_actions'] as $key => $tab ) {
-						echo $this->makeListItem( $key, $tab );
+					<?php echo $this->getIndicators(); ?>
+					<h1 class="text-4xl text-gray-100 leading-none p-0 m-0"><?php $this->html('title'); ?></h1>
+
+					<?php if ($this->data['isarticle']) {
+						echo '<div>';
+						$this->msg('tagline');
+						echo '</div>';
 					} ?>
-				</ul>
 
-				<?php echo $this->getIndicators(); ?>
-				<h1 class="text-4xl text-gray-100 leading-none p-0 m-0"><?php $this->html( 'title' ); ?></h1>
+					<?php $this->html('subtitle'); ?>
+					<?php $this->html('undelete'); ?>
+				</div>
 
-				<?php if ( $this->data['isarticle'] ) {
-					echo '<div>';
-					$this->msg( 'tagline' ); 
-					echo '</div>';
-				} ?>
+				<div class="articlebody">
+					<?php $this->html('bodytext'); ?>
+				</div>
+				<?php $this->html('dataAfterContent'); ?>
+				<?php $this->html('catlinks'); ?>
 
-				<?php $this->html( 'subtitle' ); ?>
-				<?php $this->html( 'undelete' ); ?>
+				<div class="footer">
+					<div>
+					<div class="footer-icons">
+							<?php foreach ($this->getFooterIcons('icononly') as $blockName => $footerIcons) : ?>
+								<div>
+									<?php foreach ($footerIcons as $icon) {
+										echo $this->getSkin()->makeFooterIcon($icon);
+									}  ?>
+								</div>
+							<?php endforeach; ?>
+						</div>
+
+						<?php foreach ($this->getFooterLinks() as $category => $links) : ?>
+							<ul class="list-reset">
+								<?php foreach ($links as $key) : ?>
+									<li><?php $this->html($key) ?></li>
+								<?php endforeach; ?>
+							</ul>
+						<?php endforeach; ?>
+					</div>
+				</div>
 			</div>
-
-			<div class="articlebody">
-				<?php $this->html( 'bodytext' ); ?>
-			</div>
-			<?php $this->html( 'dataAfterContent' ); ?>
-			<?php $this->html( 'catlinks' ); ?>
 		</div>
 	</div>
 
