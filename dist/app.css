@@ -7624,6 +7624,14 @@ table.wikitable th {
   list-style-type: disc;
 }
 
+p {
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  background: #0c1016 !important;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;

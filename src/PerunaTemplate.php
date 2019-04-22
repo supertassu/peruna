@@ -62,7 +62,7 @@ class PerunaTemplate extends BaseTemplate
 				</div>
 			<?php endif; ?>
 
-			<div class="text-center">
+			<div>
 				<?php $this->html( 'sitenotice' ); ?>
 			</div>
 
@@ -72,7 +72,6 @@ class PerunaTemplate extends BaseTemplate
 						echo $this->makeListItem( $key, $tab );
 					} ?>
 				</ul>
-
 
 				<?php echo $this->getIndicators(); ?>
 				<h1 class="text-4xl text-gray-100 leading-none p-0 m-0"><?php $this->html( 'title' ); ?></h1>

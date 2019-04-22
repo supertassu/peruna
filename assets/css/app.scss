@@ -156,3 +156,11 @@ table.wikitable {
 .mw-parser-output ul {
     @apply list-disc;
 }
+
+p {
+    @apply mb-2;
+}
+
+textarea {
+    background: #0c1016 !important;
+}
