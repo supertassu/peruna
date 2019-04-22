@@ -7609,27 +7609,28 @@ h4 {
   margin-top: 0.5rem;
 }
 
-table.wikitable, table.mw-datatable {
+table.wikitable, table.mw-datatable, table.mw-abuselog-details {
   background: #0c1016 !important;
   color: #edf2f7;
   border-width: 1px;
   border-color: #1a202c;
 }
 
-table.wikitable th, table.mw-datatable th {
+table.wikitable th, table.mw-datatable th, table.mw-abuselog-details th {
   background: #1A202C !important;
 }
 
-table.wikitable td, table.mw-datatable td {
+table.wikitable td, table.mw-datatable td, table.mw-abuselog-details td {
   background: #0c1016 !important;
 }
 
 .mw-parser-output ul {
   list-style-type: disc;
+  padding-left: 0.5rem;
 }
 
 p {
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 textarea {

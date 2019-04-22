@@ -144,7 +144,7 @@ h4 {
     }
 }
 
-table.wikitable, table.mw-datatable {
+table.wikitable, table.mw-datatable, table.mw-abuselog-details {
     background: #0c1016 !important;
     @apply text-gray-200 border border-gray-900;
 
@@ -158,11 +158,11 @@ table.wikitable, table.mw-datatable {
 }
 
 .mw-parser-output ul {
-    @apply list-disc;
+    @apply list-disc pl-2;
 }
 
 p {
-    @apply mb-2;
+    @apply mt-2;
 }
 
 textarea {
