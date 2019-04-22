@@ -86,7 +86,9 @@ class PerunaTemplate extends BaseTemplate
 				<?php $this->html( 'undelete' ); ?>
 			</div>
 
-			<?php $this->html( 'bodytext' ); ?>
+			<div class="articlebody">
+				<?php $this->html( 'bodytext' ); ?>
+			</div>
 			<?php $this->html( 'dataAfterContent' ); ?>
 			<?php $this->html( 'catlinks' ); ?>
 		</div>

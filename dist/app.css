@@ -7624,7 +7624,7 @@ table.wikitable td, table.mw-datatable td, table.mw-abuselog-details td {
   background: #0c1016 !important;
 }
 
-.mw-parser-output ul {
+.articlebody ul, .mw-parser-output ul {
   list-style-type: disc;
   padding-left: 0.5rem;
 }
@@ -7647,6 +7647,36 @@ code {
 
 table {
   border-collapse: separate;
+}
+
+.personal-tools #pt-notifications-alert a.mw-echo-notifications-badge:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22lightgray%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E bell %3C/title%3E %3Cpath d=%22M16 7a5.38 5.38 0 0 0-4.46-4.85C11.6 1.46 11.53 0 10 0S8.4 1.46 8.46 2.15A5.38 5.38 0 0 0 4 7v6l-2 2v1h16v-1l-2-2zm-6 13a3 3 0 0 0 3-3H7a3 3 0 0 0 3 3z%22/%3E %3C/svg%3E");
+}
+
+.personal-tools #pt-notifications-notice .mw-echo-notifications-badge:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22lightgray%22 width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22%3E %3Ctitle%3E tray %3C/title%3E %3Cpath d=%22M17 1H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 12h-4l-1 2H8l-1-2H3V3h14z%22/%3E %3C/svg%3E");
+}
+
+.mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend,
+.oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle,
+.mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-title {
+  background-color: #0c1016 !important;
+  color: #EDF2F7 !important;
+}
+
+.mwe-popups {
+  background-color: #0c1016 !important;
+  border: 1px solid #1A202C !important;
+  color: #EDF2F7 !important;
+}
+
+.mwe-popups .mwe-popups-extract {
+  /* make the text white */
+  color: #EDF2F7 !important;
+}
+
+.mwe-popups .mwe-popups-extract::after {
+  background-image: none !important;
 }
 
 @media (min-width: 640px) {
