@@ -7510,7 +7510,7 @@ a.new {
   color: #2d3748;
 }
 
-input[type=text], input[type=search] {
+input:not([type]), input[type=text], input[type=search] {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;

@@ -69,7 +69,7 @@ a.new {
     @apply text-gray-800;
 }
 
-input[type=text], input[type=search] {
+input:not([type]), input[type=text], input[type=search] {
     @apply py-1 px-2 text-white bg-gray-900;
 }
 
