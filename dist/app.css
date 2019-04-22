@@ -7550,6 +7550,10 @@ input[type=text], input[type=search] {
   border-color: #1a202c;
 }
 
+#toc .tocnumber {
+  color: #fff;
+}
+
 #toc .toctitle h2 {
   display: inline-block;
   margin-top: 0.25rem;
@@ -7559,6 +7563,12 @@ input[type=text], input[type=search] {
 #toc ul {
   margin-left: 1rem;
   margin-right: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+#toc ul li a {
+  color: #a0aec0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7579,7 +7589,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.875rem;
+  font-size: 1.25rem;
 }
 
 h4 {
@@ -7597,6 +7607,21 @@ h4 {
 
 .thumb .thumbcaption {
   margin-top: 0.5rem;
+}
+
+table.wikitable {
+  background: #0c1016 !important;
+  color: #edf2f7;
+  border-width: 1px;
+  border-color: #1a202c;
+}
+
+table.wikitable th {
+  background: #1A202C !important;
+}
+
+.mw-parser-output ul {
+  list-style-type: disc;
 }
 
 @media (min-width: 640px) {

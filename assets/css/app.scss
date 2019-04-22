@@ -96,12 +96,22 @@ input[type=text], input[type=search] {
     background: #0c1016;
     @apply p-2 my-2 text-white border border-gray-900;
 
+    .tocnumber {
+        @apply text-white;
+    }
+
     .toctitle h2 {
         @apply inline-block my-1;
     }
 
     ul {
         @apply mx-4;
+        list-style: none;
+        padding: 0;
+
+        li a {
+            @apply text-gray-500;
+        }
     }
 }
 
@@ -118,7 +128,7 @@ h2 {
 }
 
 h3 {
-    @apply text-3xl;
+    @apply text-xl;
 }
 
 h4 {
@@ -132,4 +142,17 @@ h4 {
     .thumbcaption {
         @apply mt-2;
     }
+}
+
+table.wikitable {
+    background: #0c1016 !important;
+    @apply text-gray-200 border border-gray-900;
+
+    th {
+        background: #1A202C !important;
+    }
+}
+
+.mw-parser-output ul {
+    @apply list-disc;
 }
