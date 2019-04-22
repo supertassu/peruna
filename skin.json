@@ -24,8 +24,9 @@
 		},
 		"skins.peruna.js": {
 			"scripts": [
-				"scripts/index.js"
-			]
+				"assets/js/app.js"
+			],
+			"dependencies": "jquery"
 		}
 	},
 	"ResourceFileModulePaths": {

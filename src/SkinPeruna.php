@@ -28,7 +28,7 @@ class SkinPeruna extends SkinTemplate {
 		parent::initPage( $out );
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		$out->addBodyClasses( 'text-gray-200 bg-black' );
-		// $out->addModules( 'skins.peruna.js' );
+		$out->addModules( 'skins.peruna.js' );
 	}
 
 	/**
