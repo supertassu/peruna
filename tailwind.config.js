@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    // Some useful comment
+    extend: {
+      screens: {
+        'max-md': {max: '768px'}
+      }
+    }
   },
   variants: {
     // Some useful comment

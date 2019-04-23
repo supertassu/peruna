@@ -21,7 +21,7 @@ class PerunaTemplate extends BaseTemplate
 			</form>
 		</div>
 
-		<ul class="list-reset flex personal-tools">
+		<ul class="list-reset flex flex-wrap max-md:mt-4 personal-tools">
 			<?php
 			foreach ($this->getPersonalTools() as $key => $item) {
 				echo $this->makeListItem($key, $item);

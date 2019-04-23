@@ -198,6 +198,13 @@ table {
     color: #EDF2F7 !important;
 }
 
+.mw-highlight {
+    @apply p-2;
+    background-color: #0c1016 !important;
+    border: 1px solid #1A202C !important;
+    color: #EDF2F7 !important;
+}
+
 .mwe-popups {
     background-color: #0c1016 !important;
     border: 1px solid #1A202C !important;
