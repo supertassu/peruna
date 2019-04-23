@@ -7435,15 +7435,15 @@ video {
   z-index: auto;
 }
 
-a {
+a, .link {
   color: #90cdf4;
 }
 
-a:hover {
+a:hover, .link:hover {
   text-decoration: underline;
 }
 
-a.new {
+a.new, .link.new {
   color: #fc8181;
 }
 
@@ -7707,6 +7707,18 @@ table {
 .footer .footer-icons div {
   margin-right: 0.5rem;
   display: inline-block;
+}
+
+.oo-ui-menuSelectWidget {
+  background-color: #0b0d11;
+}
+
+.oo-ui-menuSelectWidget.oo-ui-widget-enabled {
+  background-color: #1a202c;
+}
+
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
+  background-color: #000;
 }
 
 @media (min-width: 640px) {

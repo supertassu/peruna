@@ -15,23 +15,31 @@ class PerunaTemplate extends BaseTemplate
 
 	<div class="flex justify-between items-center flex-wrap p-2">
 		<div>
-			<form action="<?php $this->text('wgScript'); ?>">
+			<form action="<?php $this->text('wgScript'); ?>" class="inline-block">
 				<input type="hidden" name="title" value="<?php $this->text('searchtitle') ?>" />
 				<?php echo $this->makeSearchInput(['id' => 'searchInput']); ?>
 			</form>
+
+			<div class="inline-block md:hidden ml-4">
+				<button id="toggle-navigation" class="link">
+					Menu
+				</button>
+
+				<a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']); ?>">
+					Home
+				</a>
+			</div>
 		</div>
 
 		<ul class="list-reset flex flex-wrap max-md:mt-4 personal-tools">
-			<?php
-			foreach ($this->getPersonalTools() as $key => $item) {
+			<?php foreach ($this->getPersonalTools() as $key => $item) {
 				echo $this->makeListItem($key, $item);
-			}
-			?>
+			} ?>
 		</ul>
 	</div>
 
 	<div class="md:flex">
-		<div class="flex-none w-full md:max-w-xs p-6">
+		<div class="flex-none w-full md:max-w-xs p-6 max-md:hidden" id="sidebar">
 			<a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']); ?>" <?php echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo')) ?>>
 				<img src="<?php $this->text('logopath'); ?>" alt="<?php $this->text('sitename') ?>">
 			</a>

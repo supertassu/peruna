@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
+a, .link {
     @apply text-blue-300;
-}
 
-a:hover {
-    @apply underline;
-}
+    &:hover {
+        @apply underline;
+    }
 
-a.new {
-    @apply text-red-400;
+    &.new {
+        @apply text-red-400;
+    }
 }
 
 .personal-tools li {
@@ -240,4 +240,16 @@ table {
         }
     }
 
+}
+
+.oo-ui-menuSelectWidget {
+    background-color: #0b0d11;
+
+    &.oo-ui-widget-enabled {
+        @apply bg-gray-900;
+    }
+}
+
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
+    @apply bg-black;
 }
