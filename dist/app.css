@@ -7630,7 +7630,8 @@ table.wikitable td, table.mw-datatable td, table.mw-abuselog-details td {
 }
 
 p {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 textarea {
@@ -7709,11 +7710,11 @@ table {
   display: inline-block;
 }
 
-.oo-ui-menuSelectWidget {
+.oo-ui-menuSelectWidget:not(.mw-rcfilters-ui-menuSelectWidget) {
   background-color: #0b0d11;
 }
 
-.oo-ui-menuSelectWidget.oo-ui-widget-enabled {
+.oo-ui-menuSelectWidget:not(.mw-rcfilters-ui-menuSelectWidget).oo-ui-widget-enabled {
   background-color: #1a202c;
 }
 

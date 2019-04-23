@@ -162,7 +162,7 @@ table.wikitable, table.mw-datatable, table.mw-abuselog-details {
 }
 
 p {
-    @apply mt-2;
+    @apply my-1;
 }
 
 textarea {
@@ -242,7 +242,7 @@ table {
 
 }
 
-.oo-ui-menuSelectWidget {
+.oo-ui-menuSelectWidget:not(.mw-rcfilters-ui-menuSelectWidget) {
     background-color: #0b0d11;
 
     &.oo-ui-widget-enabled {
