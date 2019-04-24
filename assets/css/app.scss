@@ -253,3 +253,8 @@ table {
 .oo-ui-menuOptionWidget.oo-ui-optionWidget-selected {
     @apply bg-black;
 }
+
+/* revert tailwind reset */
+a.image img {
+    display: inline-block;
+}

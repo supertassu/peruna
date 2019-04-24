@@ -7722,6 +7722,12 @@ table {
   background-color: #000;
 }
 
+/* revert tailwind reset */
+
+a.image img {
+  display: inline-block;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
