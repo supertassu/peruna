@@ -7488,6 +7488,7 @@ a.new, .link.new {
 
 .catlinks {
   padding: 0.5rem;
+  background-color: #000;
   border-width: 1px;
   border-color: #1a202c;
   border-radius: 0.25rem;
@@ -7504,6 +7505,22 @@ a.new, .link.new {
 
 .catlinks li a.new {
   color: #fc8181;
+}
+
+div.mw-search-profile-tabs {
+  background-color: #1a202c;
+  border-width: 1px;
+  border-color: #4a5568;
+  color: #fff;
+}
+
+div.mw-search-profile-tabs ul {
+  list-style-type: none;
+}
+
+div.mw-search-profile-tabs .current a {
+  font-weight: 700;
+  color: #fff;
 }
 
 .oo-ui-popupWidget-popup {
@@ -7578,6 +7595,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+  font-weight: 400;
 }
 
 h1 {

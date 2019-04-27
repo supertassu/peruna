@@ -50,7 +50,7 @@ a, .link {
 }
 
 .catlinks {
-    @apply p-2 border border-gray-900 rounded mt-4;
+    @apply p-2 bg-black border border-gray-900 rounded mt-4;
 
     li {
         border-left: 1px solid #5c6370;
@@ -62,6 +62,18 @@ a, .link {
         a.new {
             @apply text-red-400;
         }
+    }
+}
+
+div.mw-search-profile-tabs {
+    @apply bg-gray-900 border border-gray-700 text-white;
+
+    ul {
+        list-style-type: none;
+    }
+
+    .current a {
+        @apply font-bold text-white;
     }
 }
 
@@ -116,7 +128,7 @@ input:not([type]), input[type=text], input[type=search] {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply text-gray-100 leading-none p-0 m-0 mt-4 mb-1;
+    @apply text-gray-100 leading-none p-0 m-0 mt-4 mb-1 font-normal;
 }
 
 h1 {
