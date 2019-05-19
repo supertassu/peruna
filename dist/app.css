@@ -7595,23 +7595,27 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 1.875rem;
-}
-
-h2 {
   font-size: 1.5rem;
 }
 
-h3 {
+h2 {
   font-size: 1.25rem;
 }
 
-h4 {
+h3 {
   font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.75rem;
 }
 
 .thumb {
@@ -7640,6 +7644,11 @@ table.wikitable th, table.mw-datatable th, table.mw-abuselog-details th {
 
 table.wikitable td, table.mw-datatable td, table.mw-abuselog-details td {
   background: #0c1016 !important;
+}
+
+.articlebody ol, .mw-parser-output ol {
+  list-style-type: decimal;
+  padding-left: 0.5rem;
 }
 
 .articlebody ul, .mw-parser-output ul {
