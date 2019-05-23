@@ -74,11 +74,13 @@ class PerunaTemplate extends BaseTemplate
 				</div>
 
 				<div class="page-title">
-					<ul class="flex list-reset flex-wrap">
-						<?php foreach ($this->data['content_actions'] as $key => $tab) {
-							echo $this->makeListItem($key, $tab);
-						} ?>
-					</ul>
+					<div id="p-cactions">
+						<ul class="flex list-reset flex-wrap">
+							<?php foreach ($this->data['content_actions'] as $key => $tab) {
+								echo $this->makeListItem($key, $tab);
+							} ?>
+						</ul>
+					</div>
 
 					<?php echo $this->getIndicators(); ?>
 					<h1 class="text-4xl text-gray-100 leading-none p-0 m-0"><?php $this->html('title'); ?></h1>
