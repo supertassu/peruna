@@ -160,9 +160,20 @@ h6 {
     }
 }
 
+* > table.wikitable > tr > th,
+* > table.wikitable > tr > td,
+* > table.wikitable > * > tr > th,
+* > table.wikitable > * > tr > td {
+    border: 1px solid #2D3748;
+}
+
 table.wikitable, table.mw-datatable, table.mw-abuselog-details {
     background: #0c1016 !important;
     @apply text-gray-200 border border-gray-900;
+
+    .sv-space {
+        display: none;
+    }
 
     th {
         background: #1A202C !important;

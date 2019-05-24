@@ -7631,11 +7631,22 @@ h6 {
   margin-top: 0.5rem;
 }
 
+* > table.wikitable > tr > th,
+* > table.wikitable > tr > td,
+* > table.wikitable > * > tr > th,
+* > table.wikitable > * > tr > td {
+  border: 1px solid #2D3748;
+}
+
 table.wikitable, table.mw-datatable, table.mw-abuselog-details {
   background: #0c1016 !important;
   color: #edf2f7;
   border-width: 1px;
   border-color: #1a202c;
+}
+
+table.wikitable .sv-space, table.mw-datatable .sv-space, table.mw-abuselog-details .sv-space {
+  display: none;
 }
 
 table.wikitable th, table.mw-datatable th, table.mw-abuselog-details th {
