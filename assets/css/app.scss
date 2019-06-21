@@ -290,7 +290,7 @@ a.image img {
     display: inline-block;
 }
 
-select, button, input[type=submit] {
+select, button, input {
     @apply bg-gray-900 border border-black rounded-sm shadow text-gray-100 p-1;
 
     &:disabled {
@@ -304,4 +304,9 @@ select, button, input[type=submit] {
 
 .diffchange {
     @apply text-black;
+}
+
+#pagehistory li.selected {
+    @apply bg-gray-900 border-gray-800 text-gray-100;
+
 }

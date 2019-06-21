@@ -7922,7 +7922,7 @@ a.image img {
   display: inline-block;
 }
 
-select, button, input[type=submit] {
+select, button, input {
   background-color: #1a202c;
   border-width: 1px;
   border-color: #000;
@@ -7932,7 +7932,7 @@ select, button, input[type=submit] {
   padding: 0.25rem;
 }
 
-select:disabled, button:disabled, input[type=submit]:disabled {
+select:disabled, button:disabled, input:disabled {
   color: #fed7d7;
   font-style: italic;
 }
@@ -7945,6 +7945,12 @@ select:disabled, button:disabled, input[type=submit]:disabled {
 
 .diffchange {
   color: #000;
+}
+
+#pagehistory li.selected {
+  background-color: #1a202c;
+  border-color: #2d3748;
+  color: #f7fafc;
 }
 
 @media (min-width: 640px) {
