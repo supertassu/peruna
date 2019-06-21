@@ -7937,6 +7937,16 @@ select:disabled, button:disabled, input[type=submit]:disabled {
   font-style: italic;
 }
 
+.diff-context {
+  background-color: #1a202c;
+  color: #fff;
+  border-color: #2d3748;
+}
+
+.diffchange {
+  color: #000;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;

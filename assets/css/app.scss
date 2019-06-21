@@ -297,3 +297,11 @@ select, button, input[type=submit] {
         @apply text-red-200 italic;
     }
 }
+
+.diff-context {
+    @apply bg-gray-900 text-white border-gray-800;
+}
+
+.diffchange {
+    @apply text-black;
+}
