@@ -289,3 +289,11 @@ table {
 a.image img {
     display: inline-block;
 }
+
+select, button, input[type=submit] {
+    @apply bg-gray-900 border border-black rounded-sm shadow text-gray-100 p-1;
+
+    &:disabled {
+        @apply text-red-200 italic;
+    }
+}
