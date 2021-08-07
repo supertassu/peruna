@@ -12,9 +12,6 @@
  * @ingroup Skins
  */
 class SkinPeruna extends SkinTemplate {
-	var $skinname = 'peruna', $stylename = 'Peruna',
-		$template = 'PerunaTemplate', $useHeadElement = true;
-
 	/**
 	 * This function adds JavaScript via ResourceLoader
 	 *
@@ -26,21 +23,8 @@ class SkinPeruna extends SkinTemplate {
 	
 	public function initPage( OutputPage $out ) {
 		parent::initPage( $out );
+		// Consider replacing with "responsive": true argument in skin.json
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		$out->addBodyClasses( 'text-gray-200 bg-black' );
-		$out->addModules( 'skins.peruna.js' );
-	}
-
-	/**
-	 * Add CSS via ResourceLoader
-	 *
-	 * @param $out OutputPage
-	 */
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
-		$out->addModuleStyles( array(
-            // 'mediawiki.skinning.interface',
-            'skins.peruna'
-		) );
 	}
 }

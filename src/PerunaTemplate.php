@@ -6,6 +6,18 @@
  */
 class PerunaTemplate extends BaseTemplate
 {
+	private function getPerunaFooterIcons() {
+		$footericons = $this->get( 'footericons' );
+		foreach ( $footericons as $footerIconsKey => &$footerIconsBlock ) {
+			foreach ( $footerIconsBlock as $footerIconKey => $footerIcon ) {
+				if ( !isset( $footerIcon['src'] ) ) {
+					unset( $footerIconsBlock[$footerIconKey] );
+				}
+			}
+		}
+		return $footericons;
+	}
+
 	/**
 	 * Outputs the entire contents of the page
 	 */
@@ -44,7 +56,7 @@ class PerunaTemplate extends BaseTemplate
 				<img src="<?php $this->text('logopath'); ?>" alt="<?php $this->text('sitename') ?>">
 			</a>
 			<?php foreach ($this->getSidebar() as $boxName => $box) : ?>
-				<div id="<?php echo Sanitizer::escapeId($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>>
+				<div id="<?php echo Sanitizer::escapeIdForAttribute($box['id']) ?>" <?php echo Linker::tooltip($box['id']) ?>>
 					<h5><?php echo htmlspecialchars($box['header']); ?></h5>
 					<?php if (is_array($box['content'])) : ?>
 						<ul class="sidebar-list">
@@ -104,7 +116,7 @@ class PerunaTemplate extends BaseTemplate
 				<div class="footer">
 					<div>
 					<div class="footer-icons">
-							<?php foreach ($this->getFooterIcons('icononly') as $blockName => $footerIcons) : ?>
+							<?php foreach ($this->getPerunaFooterIcons() as $blockName => $footerIcons) : ?>
 								<div>
 									<?php foreach ($footerIcons as $icon) {
 										echo $this->getSkin()->makeFooterIcon($icon);

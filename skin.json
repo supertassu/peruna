@@ -6,8 +6,23 @@
     "namemsg": "skinname-peruna",
     "license-name": "MIT",
 	"type": "skin",
+	"manifest_version": 2,
 	"ValidSkinNames": {
-		"peruna": "Peruna"
+		"peruna": {
+			"class": "SkinPeruna",
+			"args": [
+				{
+					"name": "peruna",
+					"template": "PerunaTemplate",
+					"styles": [
+						"skins.peruna"
+					],
+					"scripts": [
+						"skins.peruna.js"
+					]
+				}
+			]
+		}
     },
     "AutoloadClasses": {
 		"SkinPeruna": "src/SkinPeruna.php",
