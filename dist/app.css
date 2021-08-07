@@ -7897,6 +7897,10 @@ select:disabled, button:disabled, input:disabled {
   color: #f7fafc;
 }
 
+.printfooter {
+  display: none;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;

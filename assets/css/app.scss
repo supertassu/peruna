@@ -253,7 +253,7 @@ table {
 
 .footer {
     @apply mt-12;
-     
+
     ul {
         @apply ml-0;
 
@@ -308,5 +308,8 @@ select, button, input {
 
 #pagehistory li.selected {
     @apply bg-gray-900 border-gray-800 text-gray-100;
+}
 
+.printfooter {
+	@apply hidden;
 }
